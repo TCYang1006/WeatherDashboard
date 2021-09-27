@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.title{
+    background-color: blue;
+    background-image: linear-gradient(to right, blue, navy 45%);
+    height: 70px;
+    text-align: center;
+    color: whitesmoke;    
+}
+
+.searchTitle{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 0 0 5px;
+}
+
+.nowWeather{
+    border: 2px solid black;
+}
+.nowCity{
+    padding: 10px 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.nowCondition{
+    padding: 10px 5px;
+}
+
+.fiveDayBox{
+    border: 2px solid black;
+    background-color: rgb(46, 67, 109);
+    color: whitesmoke;
+    margin: 15px;
+}
+.fcText{
+    padding: 2px 5px;
+}
