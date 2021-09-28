@@ -117,16 +117,3 @@ function pastCity (){
 }
 }
 
-// function findCity(){
-// var searchCity = document.getElementById('searchCity').value;
-// findWeather(searchCity);
-// }
-// function loadCity(){
-//   var searchCityArray = localStorage.getItem("city");
-//   searchCityObj = JSON.parse(searchCityArray);
-//   console.log(searchCityObj)
-//   searchCity = searchCityObj[0];
-//   findWeather(searchCity);
-// }
-
-// window.onload = loadCity();
