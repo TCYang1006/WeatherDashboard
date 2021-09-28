@@ -52,7 +52,7 @@ function findCity() {
       var lattitude = response.coord.lat;
       var longitude = response.coord.lon;
 
-      fetch("https:api.openweathermap.org/data/2.5/onecall?lat=" + lattitude + "&lon=" + longitude + "&units=imperial&exclude=minutely,hourly,alerts&appid=" + TCYang100622ApiKey).then(function (uvData) {
+      fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + lattitude + "&lon=" + longitude + "&units=imperial&exclude=minutely,hourly,alerts&appid=" + TCYang100622ApiKey).then(function (uvData) {
         return uvData.json();
       })
         .then(function (uvData) {
