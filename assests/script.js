@@ -108,10 +108,10 @@ function findCity(searchCity) {
       
       pastCity();
     }); 
-//TODO: Remove city from input and move to first storage spot (removing the city from input needs to be done at the end)
+//Remove city from input and move to first storage spot (removing the city from input needs to be done at the end)
 function pastCity (){
     //create an array - done in variable declare section
-    //TODO: push input data into array
+    //push input data into array
     // cityArray.splice(0,0,searchCity);
     if (cityArray.indexOf(searchCity) === -1){
       cityArray.push(searchCity);
@@ -119,7 +119,7 @@ function pastCity (){
     
     cityArray.reverse();
     console.log(cityArray);
-    //TODO: set local storage
+    // set local storage
     localStorage.setItem("city",JSON.stringify(cityArray));
     console.log(cityArray.length);
     for (let j = 0; j < cityArray.length; j++) {
