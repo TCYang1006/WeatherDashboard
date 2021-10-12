@@ -39,3 +39,19 @@
 .fcText{
     padding: 2px 5px;
 }
+
+.input-container{
+    margin: 15px;
+}
+
+.past-city{
+    background-color: grey; 
+    margin: 15px; 
+    color: white; 
+    text-align: center;
+    padding: 10px;
+}
+
+.hidden{
+    display: none;
+}

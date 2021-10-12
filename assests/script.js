@@ -6,13 +6,23 @@ var TCYang100622ApiKey = "f6f99b4eef66d2120612d0e1e2bb8814",
   windSpeedEl = document.querySelector('#windSpeed'),
   humidityEl = document.querySelector('#humidity'),
   uvIndexEl = document.querySelector('#uvIndex'),
+  searchButtonEl = document.querySelector('#searchBtn')
   currentDay = moment().format('L');
 
+searchButtonEl.addEventListener('click', handleButtonClick);
 
+function handleClick(e){
+  let city = e.dataset.city;
+  findCity(city);
+}
 
-
-function findCity() {
+function handleButtonClick(){
   var searchCity = document.getElementById('searchCity').value;
+  findCity(searchCity)
+}
+
+function findCity(searchCity) {
+  // var searchCity = document.getElementById('searchCity').value;
 
   //fetch data from openweathermap.org
   fetch("https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&units=" + units + "&appid=" + TCYang100622ApiKey)
@@ -102,17 +112,26 @@ function findCity() {
 function pastCity (){
     //create an array - done in variable declare section
     //TODO: push input data into array
-    cityArray.splice(0,0,searchCity);
+    // cityArray.splice(0,0,searchCity);
+    if (cityArray.indexOf(searchCity) === -1){
+      cityArray.push(searchCity);
+    }
+    
+    cityArray.reverse();
     console.log(cityArray);
     //TODO: set local storage
     localStorage.setItem("city",JSON.stringify(cityArray));
     console.log(cityArray.length);
     for (let j = 0; j < cityArray.length; j++) {
       var passCityEl = document.querySelector('#passCity' + j);
+      
       var pCity = cityArray[j];
+      passCityEl.setAttribute("data-city", pCity)
       console.log(pCity);
       passCityEl.append(pCity);
+      passCityEl.classList.remove("hidden");
     }
+    cityArray.reverse();
     document.querySelector('#searchCity').value = '';
 }
 }

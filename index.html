@@ -21,20 +21,20 @@
             <!-- first column: location for search and storage-->
             <div class="col-4">
                 <h2 class="searchTitle">Search for a City: </h2>
-                <div class="form-group" style="margin: 15px">
+                <div class="form-group input-container">
                     <input type="text" class="form-control" id="searchCity"></input>
                 </div>
-                <div class="form-group" style="margin: 15px">
-                    <button type="button" class="btn btn-primary form-control" onclick="findCity()">Search</button>
+                <div class="form-group input-container">
+                    <button type="button" id="searchBtn" class="btn btn-primary form-control">Search</button>
                     <hr>
                 </div>
-                <div class="row" style="background-color: grey; margin: 15px; color: white; text-align: center;" id="passCity0"></div>
-                <div class="row" style="background-color: grey; margin: 15px; color: white;" id="passCity1"></div>
-                <div class="row" style="background-color: grey; margin: 15px; color: white;" id="passCity2"></div>
-                <div class="row" style="background-color: grey; margin: 15px; color: white;" id="passCity3"></div>
-                <div class="row" style="background-color: grey; margin: 15px; color: white;" id="passCity4"></div>
-                <div class="row" style="background-color: grey; margin: 15px; color: white;" id="passCity5"></div>
-                <div class="row" style="background-color: grey; margin: 15px; color: white;" id="passCity6"></div>
+                <div class="past-city hidden" onclick="handleClick(this)" id="passCity0"></div>
+                <div class="past-city hidden" onclick="handleClick(this)" id="passCity1"></div>
+                <div class="past-city hidden" onclick="handleClick(this)" id="passCity2"></div>
+                <div class="past-city hidden" onclick="handleClick(this)" id="passCity3"></div>
+                <div class="past-city hidden" onclick="handleClick(this)" id="passCity4"></div>
+                <div class="past-city hidden" onclick="handleClick(this)" id="passCity5"></div>
+                <div class="past-city hidden" onclick="handleClick(this)" id="passCity6"></div>
             </div>
             <!-- second column: weather on searched city and 5 day forcast-->
             <div class="col-8">
